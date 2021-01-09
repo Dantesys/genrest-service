@@ -1,0 +1,13 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3308,
+    "username": "root",
+    "password": "$@#Dantesys.MYSQL",
+    "database": "genrest",
+    "synchronize": true,
+    "logging": true,
+    "entities": [
+       "models/**/*.ts"
+    ]
+ }
