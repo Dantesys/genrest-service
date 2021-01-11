@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "fs": "0.0.1-security",
     "inversify": "^5.0.5",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",

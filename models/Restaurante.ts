@@ -3,8 +3,8 @@ import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 export class Restaurante extends BaseEntity{
     @PrimaryColumn()
     rest_nome?:string;
-    @Column()
+    @Column("text")
     rest_desc?:string;
-    @Column()
+    @Column("text")
     rest_logo?:string;
 }
