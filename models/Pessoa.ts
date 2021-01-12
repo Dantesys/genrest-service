@@ -1,4 +1,5 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Reserva } from "./Reserva";
 @Entity()
 export class Pessoa extends BaseEntity{
     @PrimaryGeneratedColumn()
@@ -11,4 +12,7 @@ export class Pessoa extends BaseEntity{
     pes_senha?:string;
     @Column()
     pes_fone?:string;
+    @OneToMany(type => Reserva, pes_reserva=>pes_reserva.res_ID)
+    @JoinColumn({})
+    pes_reserva?:Reserva[];
 }

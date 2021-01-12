@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Pessoa } from "./Pessoa";
 @Entity()
 export class Reserva extends BaseEntity{
@@ -6,7 +6,7 @@ export class Reserva extends BaseEntity{
     res_ID?:number;
     @Column()
     res_data?:Date;
-    @OneToOne(type => Pessoa)
+    @ManyToOne(type=>Pessoa,res_pessoa=>res_pessoa.pes_ID)
     @JoinColumn()
-    cliente?:Pessoa;
+    res_pessoa?:Pessoa;
 }
