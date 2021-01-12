@@ -12,7 +12,4 @@ export class Pessoa extends BaseEntity{
     pes_senha?:string;
     @Column()
     pes_fone?:string;
-    @OneToMany(type => Reserva, pes_reserva=>pes_reserva.res_ID)
-    @JoinColumn({})
-    pes_reserva?:Reserva[];
 }
